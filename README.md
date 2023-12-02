@@ -1,4 +1,4 @@
-Most often, `R-Ctrl` and `R-Shift` are often preferable to `L-Ctrl` and `L-Shift`. 
+`R-Ctrl` and `R-Shift` are often preferable to `L-Ctrl` and `L-Shift`. 
 
 ## Windows shortcuts
 - Copy selected text to clipboard: `Ctrl + C`
