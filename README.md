@@ -28,28 +28,11 @@
 
 ## ~/.bashrc
 ```bash
-PS1="[\u@computer]\w\n\$ "
 set -o vi
-
-alias bashrc='vi ~/.bashrc'
-alias vimrc='vi ~/.vimrc'
-alias sourcebash='source ~/.bashrc'
-alias sourcetmux='tmux source-file ~/.tmux.conf'
-alias notes='cd ~/notes && vi +$(date +"%d") $(date +"%Y-%m-").md'
-alias note='cd ~/notes && vi $(date +"%Y-%m-%d").md'
-alias gits='git status'
-alias gitl='git log --oneline --graph --pretty'
-alias gitaa='git add .'
-alias gitau='git add -u'
-alias gitai='git add -i'
-alias gitc='git commit'
-alias gitcp='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
-alias gitcpf='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
-alias gitp='git push'
-alias gitpf='git push -f'
-alias gitcl='git clean -fd'
-alias gitacpf='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
-alias gitacp='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
+PS1="[\u@wsl]\w\n\$ "
+if [ -f ~/.bash_aliases ]; then
+    vi ~/.bash_aliases
+fi
 ```
 
 ## ~/.tmux.conf
