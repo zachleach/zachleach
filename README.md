@@ -36,6 +36,43 @@ if [ -f ~/.bash_aliases ]; then
 fi
 ```
 
+## ~/.bash_aliases
+```bash
+alias cdwin="cd /mnt/c/Users/lacht/"
+alias py="python3"
+alias pip="pip3"
+
+alias bashrc='vi ~/.bashrc'
+alias vimrc='vi ~/.vimrc'
+alias tmuxrc='vi ~/.tmux.conf'
+alias aliases='vi ~/.bash_aliases'
+alias sourcebash='source ~/.bashrc'
+alias sourcetmux='tmux source-file ~/.tmux.conf'
+
+alias gits='git status'
+alias gitl='git log --oneline --graph --pretty'
+alias gitaa='git add .'
+alias gitau='git add -u'
+alias gitai='git add -i'
+alias gitc='git commit'
+alias gitcp='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
+alias gitcpf='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
+alias gitp='git push'
+alias gitpf='git push -f'
+alias gitcl='git clean -fd'
+alias gitacpf='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
+alias gitacp='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
+
+alias notes='cd ~/notes && vi +$(date +"%d") $(date +"%Y-%m-").md'
+alias note='cd ~/notes && vi $(date +"%Y-%m-%d").md'
+alias year='cd ~/notes && vi +$(date +"%m") $(date +"%Y-").md'
+alias work='cd ~/notes && vi work.md'
+alias coworkers='cd ~/notes && vi coworkers.md'
+alias strangers='cd ~/notes && vi strangers.md'
+alias family='cd ~/notes && vi family.md'
+alias friends='cd ~/notes && vi friends.md'
+```
+
 ## ~/.tmux.conf
 ```tmux
 set -g default-terminal "${TERM}"
