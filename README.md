@@ -1,10 +1,6 @@
-# Red Cooler
+Most often, `R-Ctrl` and `R-Shift` are often preferable to `L-Ctrl` and `L-Shift`. 
 
-Hotkeys mentioned below are on Windows unless stated otherwise. 
-
-Most often, `R-Ctrl` and `R-Shift` are preferable to `L-Ctrl` and `L-Shift`. 
-
-## General
+## Windows shortcuts
 - Copy selected text to clipboard: `Ctrl + C`
 - Paste selected text to clipboard: `Ctrl + V`
 - Copy selected text to clipboard and delete it: `Ctrl + X`
@@ -21,7 +17,7 @@ Most often, `R-Ctrl` and `R-Shift` are preferable to `L-Ctrl` and `L-Shift`.
    - Cursor up one line: `Ctrl + Shift + Up Arrow`
    - Cursor down one line: `Ctrl + Shift + Down Arrow`
 
-## Google chrome 
+## Google chrome shortcuts on Windows
 - Swap between tabs: `Ctrl + [0..9]`
 - Select text in search bar: `Ctrl + L`
   - Combo with typing a new search and pressing `Enter`
