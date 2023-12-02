@@ -26,16 +26,6 @@
 - Open new incognito window: `Ctrl + Shift + N`
 - Duplicate current tab: `Alt + D` `Enter`
 
-## ~/.bashrc
-```bash
-set -o vi
-PS1="[\u@wsl]\w\n\$ "
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-```
-
 ## ~/.tmux.conf
 ```tmux
 set -g default-terminal "${TERM}"
@@ -143,6 +133,16 @@ autocmd filetype c nnoremap <F9> :w <bar> !clear && gcc -Wall % -o %:r && ./%:r<
 autocmd filetype c inoremap <F9> <ESC>:w <bar> !clear && -Wall % -o %:r && ./%:r<CR>
 autocmd filetype python nnoremap <F9> :w <bar> !clear && py %<CR>
 autocmd filetype python inoremap <F9> <ESC>:w <bar> !clear && py %<CR>
+```
+
+## ~/.bashrc
+```bash
+set -o vi
+PS1="[\u@wsl]\w\n\$ "
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 ```
 
 ## ~/.bash_aliases
