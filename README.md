@@ -19,21 +19,55 @@
 
 ## Google chrome shortcuts on Windows
 - Swap between tabs: `Ctrl + [0..9]`
-- Select text in search bar: `Ctrl + L`
+- Select text in search bar: `Ctrl + L`, `Alt + D`
   - Combo with typing a new search and pressing `Enter`
 - Close current tab: `Ctrl + W`
   - Closes window if only one tab is open
 - Open new tab: `Ctrl + T`
 - Open new window: `Ctrl + N`
 - Open new incognito window: `Ctrl + Shift + N`
+- Duplicate current tab: `Alt + D` `Enter`
 
 ## ~/.bashrc
 ```bash
 PS1="[\u@computer]\w\n\$ "
 set -o vi
+
 alias bashrc='vi ~/.bashrc'
 alias vimrc='vi ~/.vimrc'
-alias gitp='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
+alias sourcebash='source ~/.bashrc'
+alias sourcetmux='tmux source-file ~/.tmux.conf'
+alias notes='cd ~/notes && vi +$(date +"%d") $(date +"%Y-%m-").md'
+alias note='cd ~/notes && vi $(date +"%Y-%m-%d").md'
+alias gits='git status'
+alias gitl='git log --oneline --graph --pretty'
+alias gitaa='git add .'
+alias gitau='git add -u'
+alias gitai='git add -i'
+alias gitc='git commit'
+alias gitcp='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
+alias gitcpf='git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
+alias gitp='git push'
+alias gitpf='git push -f'
+alias gitcl='git clean -fd'
+alias gitacpf='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push -f'
+alias gitacp='git add . && git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" && git push'
+```
+
+## ~/.tmux.conf
+```tmux
+set -g default-terminal "${TERM}"
+setw -g mode-keys vi
+set -g escape-time 0
+set -g status-right "#(TZ='America/Chicago' date '+%H:%M %Y.%m.%d')"
+
+bind-key -n C-h select-pane -L
+bind-key -n C-j select-pane -D
+bind-key -n C-k select-pane -U
+bind-key -n C-l select-pane -R
+
+bind  %  split-window -h -c "#{pane_current_path}"
+bind '"' split-window -v -c "#{pane_current_path}"
 ```
 
 ## ~/.vimrc
