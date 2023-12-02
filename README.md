@@ -150,7 +150,6 @@ fi
 alias cdwin="cd /mnt/c/Users/lacht/"
 alias py="python3"
 alias pip="pip3"
-
 alias bashrc='vi ~/.bashrc'
 alias vimrc='vi ~/.vimrc'
 alias tmuxrc='vi ~/.tmux.conf'
