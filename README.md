@@ -30,8 +30,9 @@
 ```bash
 set -o vi
 PS1="[\u@wsl]\w\n\$ "
+
 if [ -f ~/.bash_aliases ]; then
-    vi ~/.bash_aliases
+    . ~/.bash_aliases
 fi
 ```
 
